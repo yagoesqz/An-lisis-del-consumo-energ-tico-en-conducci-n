@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMW i3 — Visualización y Análisis de Datos</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; background: #f4f6f9; color: #222; }
+    header {
+      background: #1F3864;
+      color: white;
+      padding: 40px 60px;
+    }
+    header h1 { font-size: 28px; margin-bottom: 8px; }
+    header p { font-size: 15px; opacity: 0.8; }
+    main { max-width: 900px; margin: 50px auto; padding: 0 30px; }
+    h2 { color: #1F3864; margin-bottom: 24px; font-size: 20px; }
+    .cards { display: flex; flex-direction: column; gap: 20px; }
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 28px 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    .card-text h3 { font-size: 17px; color: #1F3864; margin-bottom: 6px; }
+    .card-text p { font-size: 14px; color: #555; line-height: 1.5; }
+    .card a {
+      display: inline-block;
+      background: #2E75B6;
+      color: white;
+      padding: 10px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 14px;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+    .card a:hover { background: #1F3864; }
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #aaa;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Análisis del consumo energético en conducción</h1>
+    <p>Dataset: Battery and Heating Data in Real Driving Cycles (IEEE Dataport)</p>
+  </header>
+  <main>
+    <h2>Visualizaciones</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="card-text">
+          <h3>Visualización 1: Perfil de conducción</h3>
+          <p>Gráficos velocidad–tiempo y SoC-tiempo para distintos trayectos. Permite comparar el perfil de conducción y la descarga de batería entre trayectos de verano e invierno.</p>
+        </div>
+        <a href="vis1_perfil_conduccion.html" target="_blank">Ver gráfico →</a>
+      </div>
+      <div class="card">
+        <div class="card-text">
+          <h3>Visualización 2: Temperatura exterior y consumo</h3>
+          <p>Diagrama que relaciona la temperatura exterior media, el consumo específico (Wh/km) y la potencia de calefacción.</p>
+        </div>
+        <a href="vis2_temperatura_consumo.html" target="_blank">Ver gráfico →</a>
+      </div>
+      <div class="card">
+        <div class="card-text">
+          <h3>Visualización 3: Comparativa verano vs invierno</h3>
+          <p>Consumo por categoría, histograma de caída de SoC y scatter de caída de SoC vs distancia. Compara el comportamiento energético entre invierno y verano.</p>
+        </div>
+        <a href="vis3_comparativa_categorias.html" target="_blank">Ver gráfico →</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
